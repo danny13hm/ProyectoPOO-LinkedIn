@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LinkedIn: inicio de sesión o registro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">   
+    <link rel="shortcut icon" type="image/jpg" href="img/favicon.ico"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/index-custom.css"/>    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">  
+   
+   
+</head>
+<body style="background-color:#434649;background-image: url(img/fondo1.jpg);background-size: cover;background-attachment: fixed"> 
+    <div style="width:100%;height: 100%;position:absolute;left:0;top:0">
+        <header>
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark"> 
+            <div class="navbar-brand" href="#"><img src="img/icono-linkedin.jpg">
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <form id="form-login" class="form-inline my-2 my-lg-0">
+                    <input style="margin-right:auto" class="form-control mr-sm-2" type="text" placeholder="Correo Electronico" aria-label="Email">
+                    <input style="margin-right:auto" class="form-control mr-sm-2" type="text" placeholder="Contraseña" aria-label="Password"> 
+                    <button class="btn btn-success" onclick="inicioSesion()" type="button">Inicia Sesión</button>
+                    <a class="link-forgot-password"  href="#" >¿Has olvidado tu contraseña?</a>
+                </form>
+            </div>
+            </nav>
+        </header>
+        <main id="layout-main">
+            <div id="main-container">
+                <form id="regForm" class="reg-form">
+                    <h2 class="Title">Destaca en lo que haces</h2>
+                    <h3 class="subTitle">Comienza. ¡Es gratis!</h3>
+
+                    <div id="-error">
+                       
+                    </div>
+
+                    <section class="form-body">
+                        <label>Nombre</label><br>
+                        <input type="text" name="firstName" id="reg-nombre" class="reg-firstname" aria-required="true" tabindex="1" placeholder=""><br>
+                        <label for="reg-lastname">Apellidos</label><br>
+                        <input type="text" name="lastName" id="reg-apellido" class="reg-lastname" aria-required="true" tabindex="1" placeholder=""><br>
+                        <label for="reg-email" class="reg-field__label">Correo electrónico</label><br>
+                        <input type="text" name="session_key" class="reg-email reg-field__input" id="reg-email"><br>
+                        <label for="reg-password" class="reg-field__label">Contraseña (6 o más caracteres)</label><br>
+                        <input type="password" name="session_password" class="reg-password reg-field__input" id="reg-password" aria-required="true"><br>
+                        <span class="acuerdo">Al hacer clic en unirte, aceptas las <a href="https://www.linkedin.com/legal/user-agreement">Condiciones de uso</a>, la <a tabindex="4" href="https://www.linkedin.com/legal/privacy-policy">Política <br> de privacidad</a> y la <a href="https://www.linkedin.com/legal/cookie-policy">Política de cookies</a> de LinkedIn.</span><br> 
+                        <button class="registratio submit-button" id="btn-registrar" onclick="registro()" type="button">Únete ahora</button>
+                        
+                    </section>
+                </form>
+            </div>
+            <div class="meter">
+                <form class="same-name-search">
+                    <h3 class="title">Encuentra compañeros de trabajo </h3>
+                    <input type="text" name="nombre" placeholder="Nombre" aria-label="Introduce el nombre de tu compañero">
+                    <input type="text" name="last" placeholder="Apellidos" aria-label="Introduce los apellidos de tu compañero">
+                    <input type="submit" class="submit-btn" name="search" value="Búsqueda" disabled="">
+                </form>
+                <div class="directory" >
+                    <h3 class="Title-directory">Directorio de miembros de LinkedIn: </h3>
+                    <ol>
+                        <li><a href="https://www.linkedin.com/directory/people-a" aria-label="Ver miembros de LinkedIn cuyo nombre empieza por la letra A">A</a></li>
+                        <li><a href="https://www.linkedin.com/directory/people-b" aria-label="Ver miembros de LinkedIn cuyo nombre empieza por la letra B">B</a></li>
+                        <li><a href="https://www.linkedin.com/directory/people-c" aria-label="Ver miembros de LinkedIn cuyo nombre empieza por la letra C">C</a></li>
+                        <li><a href="https://www.linkedin.com/directory/people-d" aria-label="Ver miembros de LinkedIn cuyo nombre empieza por la letra D">D</a></li>
+                        <li><a href="https://www.linkedin.com/directory/people-e" aria-label="Ver miembros de LinkedIn cuyo nombre empieza por la letra E">E</a></li>
+                        <li><a href="https://www.linkedin.com/directory/people-f" aria-label="Ver miembros de LinkedIn cuyo nombre empieza por la letra F">F</a></li>
+                        <li><a href="https://www.linkedin.com/directory/people-g" aria-label="Ver miembros de LinkedIn cuyo nombre empieza por la letra G">G</a></li>
+                        <li><a href="https://www.linkedin.com/directory/people-h" aria-label="Ver miembros de LinkedIn cuyo nombre empieza por la letra H">H</a></li>
+                        <li><a href="https://www.linkedin.com/directory/people-i" aria-label="Ver miembros de LinkedIn cuyo nombre empieza por la letra I">I</a></li>
+                        <li><a href="https://www.linkedin.com/directory/people-j" aria-label="Ver miembros de LinkedIn cuyo nombre empieza por la letra J">J</a></li>
+                        <li><a href="https://www.linkedin.com/directory/people-k" aria-label="Ver miembros de LinkedIn cuyo nombre empieza por la letra K">K</a></li>
+                        <li><a href="https://www.linkedin.com/directory/people-l" aria-label="Ver miembros de LinkedIn cuyo nombre empieza por la letra L">L</a></li>
+                        <li><a href="https://www.linkedin.com/directory/people-m" aria-label="Ver miembros de LinkedIn cuyo nombre empieza por la letra M">M</a></li>
+                        <li><a href="https://www.linkedin.com/directory/people-n" aria-label="Ver miembros de LinkedIn cuyo nombre empieza por la letra N">N</a></li>
+                        <li><a href="https://www.linkedin.com/directory/people-o" aria-label="Ver miembros de LinkedIn cuyo nombre empieza por la letra O">O</a></li>
+                        <li><a href="https://www.linkedin.com/directory/people-p" aria-label="Ver miembros de LinkedIn cuyo nombre empieza por la letra P">P</a></li>
+                        <li><a href="https://www.linkedin.com/directory/people-q" aria-label="Ver miembros de LinkedIn cuyo nombre empieza por la letra Q">Q</a></li>
+                        <li><a href="https://www.linkedin.com/directory/people-r" aria-label="Ver miembros de LinkedIn cuyo nombre empieza por la letra R">R</a></li>
+                        <li><a href="https://www.linkedin.com/directory/people-s" aria-label="Ver miembros de LinkedIn cuyo nombre empieza por la letra S">S</a></li>
+                        <li><a href="https://www.linkedin.com/directory/people-t" aria-label="Ver miembros de LinkedIn cuyo nombre empieza por la letra T">T</a></li>
+                        <li><a href="https://www.linkedin.com/directory/people-u" aria-label="Ver miembros de LinkedIn cuyo nombre empieza por la letra U">U</a></li>
+                        <li><a href="https://www.linkedin.com/directory/people-v" aria-label="Ver miembros de LinkedIn cuyo nombre empieza por la letra V">V</a></li>
+                        <li><a href="https://www.linkedin.com/directory/people-w" aria-label="Ver miembros de LinkedIn cuyo nombre empieza por la letra W">W</a></li>
+                        <li><a href="https://www.linkedin.com/directory/people-x" aria-label="Ver miembros de LinkedIn cuyo nombre empieza por la letra X">X</a></li>
+                        <li><a href="https://www.linkedin.com/directory/people-y" aria-label="Ver miembros de LinkedIn cuyo nombre empieza por la letra Y">Y</a></li>
+                        <li><a href="https://www.linkedin.com/directory/people-z" aria-label="Ver miembros de LinkedIn cuyo nombre empieza por la letra Z">Z</a></li>
+                        <li><a href="https://www.linkedin.com/directory/people-more" aria-label="Ver miembros de LinkedIn cuyo nombre empieza por la letra More">Más</a></li>
+                        <li class="country-serch">
+                            <a href=#>Busca en por país/región </a>
+                        </li>
+                    </ol>
+                </div>
+                <div class="Links-container ghp-footer">
+                    <div class="links links-general ghp-footer__section">
+                        <h3 class="title ghp-footer__section-title">General</h3>
+                        <ul class="ghp-footer__links">
+                            <li class="ghp-footer__link-item">
+                                <a href=# class="ghp-footer__link" aria-label="Registro en LinkedIn">Regístrate</a>
+                            </li>
+                            <li class="ghp-footer__link-item">
+                             <a href=# class="ghp-footer__link" aria-label="Centro de ayuda de LinkedIn">Centro de ayuda</a>
+                            </li>
+                            <li class="ghp-footer__link-item">
+                                <a href=# class="ghp-footer__link" aria-label="Acerca de LinkedIn">Acerca de</a>
+                            </li>
+                            <li class="ghp-footer__link-item">
+                                <a href=# class="ghp-footer__link" aria-label="Prensa de LinkedIn">Prensa</a>
+                            </li>
+                            <li class="ghp-footer__link-item">
+                                <a href=# class="ghp-footer__link" aria-label="Blog de LinkedIn">Blog</a>
+                            </li>
+                            <li class="ghp-footer__link-item">
+                                <a href=# class="ghp-footer__link" aria-label="Empleo LinkedIn">Empleo</a>
+                            </li>
+                            <li class="ghp-footer__link-item">
+                                    <a href=# class="ghp-footer__link" aria-label="Desarrolladores de LinkedIn">Desarrolladores</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="links links-business ghp-footer__section">
+                            <h3 class="title ghp-footer__section-title">Business Solutions</h3>
+                            <ul clas="ghp-footer__links">
+                                <li class="ghp-footer__link-item">
+                                    <a href=# class="ghp-footer__link" aria-label="LinkedIn Talent Solutions">Talent</a>
+                                </li>
+                                <li class="ghp-footer__link-item">
+                                   <a href=# class="ghp-footer__link" aria-label="LinkedIn Marketing Solutions">Marketing</a>
+                                </li>
+                                <li class="ghp-footer__link-item">
+                                  <a href=# class="ghp-footer__link" aria-label="LinkedIn Sales Solutions">Sales</a>
+                                </li>
+                                <li class="ghp-footer__link-item">
+                                    <a href=# class="ghp-footer__link" aria-label="LinkedIn Learning Solutions">Learning</a>
+                                </li>
+                                <li class="ghp-footer__link-item">
+                                    <a href=# class="ghp-footer__link" aria-label="">Páginas de empresa</a>
+                                </li>
+                            </ul>
+                    </div>
+                    <div class= "links links-browse ghp-footer__section">
+                            <h3 class="ghp-footer__section-title">Navegar por LinkedIn</h3>
+                            <ul class="ghp-footer__links">
+                                <li class="ghp-footer__link-item" >
+                                    <a href=# class="ghp-footer__link" aria-label="LinkedIn Learning">Learning</a>
+                                </li>
+                                <li class="ghp-footer__link-item">
+                                    <a href=# class="ghp-footer__link" aria-label="Empleos LinkedIn">Empleos</a>
+                                </li>
+                                <li class="ghp-footer__link-item">
+                                    <a href=# class="ghp-footer__link" aria-label="LinkedIn Salary">Sueldo</a>
+                                </li>
+                                <li class="ghp-footer__link-item">
+                                    <a href=# class="ghp-footer__link" aria-label="LinkedIn Móvil">Móvil</a>
+                                </li>
+                                <li class="ghp-footer__link-item">
+                                        <a href=# class="ghp-footer__link" aria-label="LinkedIn ProFinder">ProFinder</a>
+                                </li>    
+                            </ul>
+                    </div> 
+                    <div class="links links-directories ghp-footer__section">
+                        <h3 class="ghp-footer__section-title">Directorios</h3>
+                        <ul class="ghp-footer__links">
+                            <li class="ghp-footer__link-item">
+                                <a href=# class="ghp-footer__link" aria-label="Directorio de miembros de LinkedIn">Miembros</a>
+                            </li>
+                            <li class="ghp-footer__link-item">
+                                <a href=# class="ghp-footer__link" aria-label="Directorio de empleos de LinkedIn">Empleos</a>
+                            </li>
+                            <li class="ghp-footer__link-item">
+                                 <a href=# class="ghp-footer__link" aria-label="Directorio de empresas de LinkedIn">Empresas</a>
+                            </li>
+                            <li class="ghp-footer__link-item">
+                                <a href=# class="ghp-footer__link" aria-label="Directorio de sueldos de LinkedIn">Sueldos</a>
+                            </li>
+                            <li class="ghp-footer__link-item">
+                                <a href=# class="ghp-footer__link" aria-label="Directorio de universidades de LinkedIn">Universidades</a>
+                            </li>
+                            <li class="ghp-footer__link-item">
+                                <a href=# aria-label="Directorio de empleos principales de LinkedIn">Principales empleos</a>
+                            </li>
+                            <li class="ghp-footer__link-item">
+                                <a href=# class="ghp-footer__link" aria-label="Job Search">Job Search</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <footer>
+                <div class="legal-nav">
+                    <div class="copyright">
+                        <img class="copyright-logo" alt="LinkedIn" src="img/copyright-logo.jpg"> © 2019
+                    </div>
+                    
+                    <ul>
+                        <li>
+                            <a href=#>Condiciones de uso</a>
+                        </li>
+                        <li>
+                            <a href=#>Política de privacidad</a>
+                        </li>
+                        <li>
+                            <a href=#>Directrices Comunitarias</a>
+                        </li>
+                        <li>
+                            <a href=#>Política de Cookies</a>
+                        </li>
+                        <li>
+                            <a href=#>Política de Copyright</a>
+                        </li>
+                        <li>
+                            <a href=#>Controles de invitados</a>
+                        </li>
+                        
+                        <li class="lang-selector-container">
+                            <input type="checkbox" id="lang-selector-state" name="lang-selector-state" dir="ltr">
+                            <label id="selector" for="lang-selector-state" class="lang-selector-state-label" tabindex="0" role="button" aria-expanded="false">Idioma</label>
+                            <form name="languageSelectorForm" id="languageSelectorForm" action="/languageSelector" method="POST">
+                                <ul id="caja" class="lang-selector">
+                                    <li><button data-locale="in_ID">Bahasa Indonesia</button></li>
+                                    <li><button data-locale="ms_MY">Bahasa Malaysia</button></li>
+                                    <li><button data-locale="cs_CZ">Čeština</button></li>
+                                    <li><button data-locale="da_DK">Dansk</button></li>
+                                    <li><button data-locale="de_DE">Deutsch</button></li>
+                                    <li><button data-locale="en_US">English</button></li>
+                                    <li><span class="current">Español</span></li>
+                                    <li><button data-locale="zh_TW">正體中文</button></li>
+                                    <li><button data-locale="fr_FR">Français</button></li>
+                                    <li><button data-locale="ko_KR">한국어</button></li>
+                                    <li><button data-locale="it_IT">Italiano</button></li>
+                                    <li><button data-locale="zh_CN">简体中文</button></li>
+                                    <li><button data-locale="nl_NL">Nederlands</button></li>
+                                    <li><button data-locale="ja_JP">日本語</button></li>
+                                    <li><button data-locale="no_NO">Norsk</button></li>
+                                    <li><button data-locale="pl_PL">Polski</button></li>
+                                    <li><button data-locale="pt_BR">Português</button></li>
+                                    <li><button data-locale="ro_RO">Română</button></li>
+                                    <li><button data-locale="ru_RU">Русский</button></li>
+                                    <li><button data-locale="sv_SE">Svenska</button></li>
+                                    <li><button data-locale="tl_PH">Tagalog</button></li>
+                                    <li><button data-locale="th_TH">ภาษาไทย</button></li>
+                                    <li><button data-locale="tr_TR">Türkçe</button></li>
+                                    <li><button data-locale="ar_AE">العربية</button></li>
+                                </ul>
+                                <input type="hidden" name="i18nLang" value="">
+                                <input type="hidden" name="currenturl" value="">
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+                </footer>
+            </div>
+        </main>
+    </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/registro.js"></script> 
+    <script>//Funcion Investigada
+        $(document).ready(function () {
+            $(document).on('mouseup', function(e){
+                const container = $("#lang-selector-state");
+                if(!container.is(e.target) && container.has(e.target).length === 0) {
+                    $('#caja').hide('slide');
+                } 
+            });
+            $('#lang-selector-state').on('click', function () {
+                $('#caja').show('slide');
+            });
+        });
+    </script>
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
